@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+:root{
+    --theme-color: #e43222;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+header {
+    color: black;
+    padding: 10px 0;
+}
+
+header .title {
+    font-size: 37px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--theme-color);
+}
+
+header .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: black;
+    margin: 0 10px;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-bar ul li {
+    display: inline;
+    position: relative;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-family: 'SUSE', sans-serif;
+}
+
+.nav-bar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--theme-color); 
+    visibility: hidden; 
+    transform: scaleX(0); 
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-bar ul li a:hover::before {
+    visibility: visible; 
+    transform: scaleX(1);
+}
+
+
+/*hero section*/
+.hero {
+    background-image: url(images/backgrounddesign.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    color: black;
+}
+
+.hero .container{
+    max-width: 600px;
+    padding-bottom: 110px;
+}
+
+.hero .headline{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.headline span{
+    color: var(--theme-color);
+}
+
+.hero .subheadline {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'SUSE', sans-serif;
+}
+
+.btn-logo{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.hero .button {
+    padding: 10px 20px;
+    background-color: var(--theme-color);
+    border-radius: 30px;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Nerko One', sans-serif;
+}
+
+.contact-logo{
+    font-size: 35px;
+}
+
+.contact-logo a{
+    color: black;
+    padding: 7px;
+}
+
+.contact-logo a:hover{
+    color: var(--theme-color);
+    transition: all 0.3s ease-in-out;
+}
