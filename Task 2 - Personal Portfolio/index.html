@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Icons Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!--Header-->
+    <header class="main-header">
+        <nav class="navbar">
+            <!--Name-->
+            <h4 class="name">Haniyah<span class="primary-color">.</span></h4>
+        
+            <!--Menu that collapses-->
+            <div class="navbar-collapse">
+                <ul id="navbar-collapse-toggle">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Me</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        
+            <!--Menu Icon-->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="bi bi-list"></i>
+            </div>
+        </nav>
+        
+        <!--Toggle Menu-->
+        <script>
+            const menu = document.getElementById('navbar-collapse-toggle');
+            menu.style.maxHeight = '0px';
+        
+            function toggleMenu() {
+                if (menu.style.maxHeight === '0px') {
+                    menu.style.maxHeight = '300px';
+                } else {
+                    menu.style.maxHeight = '0px'; 
+                }
+            }
+        </script>
+    </header>
+    <!--Home Section-->
+    <main>
+        <section id="home" class="home-section">
+            <div class="home-container">
+                <div class="text">
+                    <h6>Hi, My Name Is Haniyah Umair,</h6>
+                <div class="typing-container">
+                    <h1>I'm A <span class="typing-text" id="typing-text">Second Year Computer Science Student.</span></h1>
+                </div>      
+                <h5>Aspiring Software Developer.</h5>
+                <!-- Button that links to the about page -->
+                <a href="#about" class="about-btn">ABOUT ME</a>
+                </div>
+                
+                <div class="my-image">
+                    <img src="images/my-image.png" alt="my image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="about-image">
+            <img src="images/about-img.png" alt="About Me">
+        </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Hello! I'm Haniyah Umair, a second-year Computer Science student with a passion for <span>front-end and software development.</span> I aspire to build innovative solutions that merge my love for technology and creativity. With experience in <span>HTML, CSS, JavaScript, and Python</span>, I'm continuously learning new skills to advance my expertise in the field.</p>
+            <p>When I'm not coding, you’ll find me exploring the latest in technology, watching my favorite shows, or sketching creative designs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section">
+    <div class="container">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-items">
+            <!-- Travel Website Project -->
+            <div class="portfolio-item">
+                <img src="images/travel-website.png" alt="Travel Website">
+                <div class="portfolio-info">
+                    <h3>Travel Website</h3>
+                    <p>A fully responsive travel website featuring a home page, history page, and visit page, built using HTML, CSS, and Bootstrap.</p>
+                </div>
+            </div>
+            <!-- Landing Page Project -->
+            <div class="portfolio-item">
+                <img src="images/landing-page.png" alt="Landing Page">
+                <div class="portfolio-info">
+                    <h3>Landing Page</h3>
+                    <p>An eye-catching landing page designed for showcasing a product, built with HTML and CSS, featuring a clean layout and modern design.</p>
+                </div>
+            </div>
+            <!-- Calculator Project -->
+            <div class="portfolio-item">
+                <div class="video-container">
+                    <video controls>
+                        <source src="videos/calculator.mov" type="video/mp4"> 
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Calculator</h3>
+                    <p>A simple calculator built with HTML, CSS, and JavaScript, demonstrating basic functionality and interactive design.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Me Section -->
+<!-- Contact Me Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-icons">
+                <i class="bi bi-telephone-fill"></i>
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-linkedin"></i>
+            </div>
+        </div>
+        <div class="contact-image">
+            <img src="images/contact.png" alt="Contact">
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
